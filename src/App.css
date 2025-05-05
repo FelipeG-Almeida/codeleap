@@ -1,0 +1,83 @@
+:root {
+    --mainColor: #7695ec;
+    --mutedText: #777777;
+    --grey: #999999;
+    --red: #ff5151;
+    --green: #47b960
+}
+
+html,
+body,
+#root {
+    height: 100%;
+}
+
+main {
+    align-items: center;
+    background-color: #dddddd;
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+}
+
+form input,
+form textarea {
+    border: 2px solid var(--mutedText);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 400;
+    height: 32px;
+    padding: 4px 16px;
+    transition: all 0.2s;
+    margin-bottom: 16px;
+}
+
+form textarea {
+    padding: 16px;
+    min-height: 75px;
+    resize: vertical;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+    color: #cccccc;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border: 2px solid var(--mainColor);
+}
+
+button {
+    align-self: flex-end;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 32px;
+    transition: all 0.2s;
+    cursor: pointer;
+    width: 110px;
+}
+
+button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+    button {
+        height: 42px;
+    }
+}
